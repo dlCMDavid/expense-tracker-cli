@@ -1,0 +1,16 @@
+{
+  "name": "expensetracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "expenseTrackerCli.js",
+  "scripts": {
+    "test": "node ./expenseTrackerCli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "type": "module"
+}
