@@ -1,8 +1,10 @@
 import { Command } from "commander";
+import ExpenseService from "./expenseService.js";
 
 class CommandBuilder {
   constructor() {
     this.program = new Command();
+    this.expenseService = new ExpenseService();
   }
 
   add() {
@@ -12,8 +14,12 @@ class CommandBuilder {
       .option("-d, --description", "Description")
       .option("-a, --amount", "Amount")
       .action((name, options) => {
-        const greeting = `Hello, ${name}!`;
-        console.log(options.loud ? greeting.toUpperCase() : greeting);
+        var description = options.description
+        var amount = options.amount;
+
+
+
+        console.log(`Expense added successfully (ID: ${})`);
       });
 
     return this;
